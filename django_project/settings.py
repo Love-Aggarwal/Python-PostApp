@@ -25,7 +25,7 @@ SECRET_KEY = 'b^t5k8nh%&yt-_baxc5tpir2(uo#il%-s**4@n*py_ei99z__j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','post24-app.herokuapp.com']
 # Email settings
 
 SERVER_EMAIL = 'aggarwallovedec1998@gmail.com'
