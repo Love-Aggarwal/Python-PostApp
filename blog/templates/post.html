@@ -1,0 +1,12 @@
+
+{% for k, v in dict.items %}
+    <p>{{ k }} : {{ v }}</p>
+{% endfor %}
+<p>I have {{ num }} diar{{ num|pluralize:"y,ies" }}</p>
+<p>You have {{ num }} product {{ num|pluralize }} in your cart</p> 
+ <p>Today is {{ now|date:"D d M Y" }}</p> 
+ {% autoescape on %}
+ {{ my_code }}
+{% endautoescape %}
+
+

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Title from child template
+{% endblock %}
+
+{% block content %}
+
+    {% if now %}
+        <p>Current date and time is {{ now }}</p>
+    {% else %}
+        <p>now variable is not available</p>
+    {% endif %}
+
+    <p>Current scheme: {{ request.scheme }}</p>
+    <p>BASE_DIR : {{ base_dir }}</p>
+
+{% endblock %}
+{% block footer %}
+    {{ block.super }}   <!--this will give data from parent footer-->
+    <p>All rights reserved</p>
+{% endblock %}
