@@ -25,7 +25,7 @@ SECRET_KEY = 'b^t5k8nh%&yt-_baxc5tpir2(uo#il%-s**4@n*py_ei99z__j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 # Email settings
 
 SERVER_EMAIL = 'aggarwallovedec1998@gmail.com'
@@ -65,6 +65,7 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
