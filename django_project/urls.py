@@ -4,7 +4,7 @@ from django.urls import path,include
 from blog import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.static import serve
 
 urlpatterns = [
     
@@ -22,6 +22,9 @@ urlpatterns = [
     #path('', views.index, name='blog_index'),
     path('',include('blog.urls')),
     path('cadmin/',include('cadmin.urls')),
+    url(r'^media/(?P<path>.*)$',serve,{'document_root': settings.MEDIA_ROOT} ),
+    url(r'^static/(?P<path>.*)$',serve,{'document_root': settings.STATIC_ROOT} ),
+    
 
     # url(r'^category/(?P<category_slug>[\w-]+)/$', views.post_by_category, name='post_by_category'),
     # url(r'^tag/(?P<tag_slug>[\w-]+)/$', views.post_by_tag, name='post_by_tag'),
